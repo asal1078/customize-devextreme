@@ -1,0 +1,54 @@
+<div class="container mw-100 mt-5">
+    <div class="row justify-content-center dx-viewport">
+        <div class="col-9 panel__table-fram demo-container">
+            <div class="conatainer">
+                <div class="row justify-content-center">
+
+                    <dx-data-grid
+                    [dataSource]="scores"
+                    [height]="450"
+                    [showBorders]="true"
+                    [showColumnLines]="true">
+
+                    <dxo-scrolling mode="virtual"></dxo-scrolling>
+                    <dxo-filter-row [visible]="true"></dxo-filter-row>
+                   
+                    <dxi-column
+                    name="lesson"
+                    dataField="lesson"
+                    [filterOperations]="['contains', '=']"
+                    dataType="text"
+                    alignment="center"
+                    [caption]="'نام درس'"
+                    [width]="150">
+                        <dxo-header-filter [allowSearch]="true"></dxo-header-filter>
+                    </dxi-column>
+
+                    <dxi-column
+                    name="score"
+                    dataField="score"
+                    [filterOperations]="['contains', '=']"
+                    dataType="text"
+                    alignment="center"
+                    [caption]="'نمرات'"
+                    [width]="150">
+                        <dxo-header-filter [allowSearch]="true"></dxo-header-filter>
+                    </dxi-column>
+
+                    </dx-data-grid>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <ng-template #Loading>
+    </ng-template>
+  
+    <ngx-loading
+      [show]="loading"
+      [config]="{ backdropBorderRadius: '3px' }"
+      [template]="Loading"></ngx-loading>
+

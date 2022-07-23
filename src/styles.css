@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../src/assets/styles/button.css";
+@import "../src/assets/styles/input.css";
+
+@font-face {
+    font-family: dastNevis;
+    src: url(../src/assets/font/Far_DastNevis.otf);
+}
+
+@font-face {
+    font-family: vazir;
+    src: url(../src/assets/font/Vazir.ttf);
+}
+
+* {
+    font-family: vazir;
+}

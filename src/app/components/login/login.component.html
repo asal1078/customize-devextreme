@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4 login__input-fram mt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <img src="../../../assets/images/child.png" class="login__fram-logo">
+                </div>
+                <div class="row justify-content-center login__inputs-fram">         
+
+                    <input
+                    (keyup)="checkUserName()"
+                    id="username"
+                    name="username"
+                    #username
+                    class="inputs"
+                    [placeholder]="userNameInput.placeholder"
+                    [minlength]="userNameInput.minLen"
+                    [maxlength]="userNameInput.maxLen"
+                    [required]="userNameInput.required"
+                    [(ngModel)]="loginModel.username">
+
+                    <input
+                    (keyup)="checkPassword()"
+                    id="password"
+                    name="password"
+                    #password
+                    class="inputs mt-3"
+                    [placeholder]="PasswordInput.placeholder"
+                    [minlength]="PasswordInput.minLen"
+                    [maxlength]="PasswordInput.maxLen"
+                    [required]="PasswordInput.required"
+                    [(ngModel)]="loginModel.password">
+
+                    <div class="row justify-content-center">
+                        <button class="submit-btn mt-4" (click)="login()" [disabled]="disableSubmitButton">ورود</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #customLoadingTemplate>
+        <div class="custom-class">
+          <h3>Loading...</h3>
+          <button>Click me!</button>
+        </div>
+      </ng-template>
+    <ngx-loading
+    [show]="loading"
+    [config]="{ backdropBorderRadius: '3px' }"
+    [template]="customLoadingTemplate"
+  ></ngx-loading>
+</div>

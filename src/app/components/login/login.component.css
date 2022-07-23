@@ -1,0 +1,32 @@
+.login__input-fram {
+    text-align: center;
+    height: 340px;
+    border-radius: 25px;
+    border: rgb(77, 125, 179) 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.login__fram-logo {
+    width: 200px; 
+    z-index: 2;
+    position: absolute;
+    top: 6px;
+}
+
+.login__inputs-fram {
+    text-align: center;
+    top: 150px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.login__alert-fram__error {
+    background-color: rgb(216, 90, 92);
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+}
+
+
